@@ -42,3 +42,12 @@ function total() {
   }
   return totalCost;
 }
+
+function placeOrder(creditCardNumber) {
+  if (creditCardNumber !== undefined) {
+    console.log('Your total cost is ' + total() + ' which will be charged to the card ' + creditCardNumber + '.');
+    cart = [];
+  } else {
+    console.log(`Sorry, we don't have a credit card on file for you.`)
+  }
+}

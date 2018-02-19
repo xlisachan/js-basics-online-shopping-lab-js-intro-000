@@ -35,10 +35,10 @@ function viewCart() {
 }
 
 function total() {
-  var total = 0;
+  var totalCost = 0;
   for (let i = 0; i < cart.length; i++){
     var itemName  = Object.keys(cart[i])[0];
-    total += cart[i][itemName];
+    totalCost += cart[i][itemName];
   }
-  console.log(total)
+  return totalCost;
 }

@@ -46,12 +46,11 @@ function total() {
 
 function removeFromCart(item) {
 	for (let i = 0; i < cart.length; i++){
-   var itemName  = Object.keys(cart[i])[0];
-   if (cart[i].hasOwnProperty(item) == false){
-     console.log('That item is not in your cart.');
+   if (cart[i].hasOwnProperty(item) === true){
+     cart.splice(i, 1);
+     return cart;
    } else {
-     delete cart[i];
-   }
-   return cart;
+     console.log('That item is not in your cart.');
+     return cart;
   }
 }

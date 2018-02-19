@@ -35,17 +35,22 @@ function viewCart() {
 }
 
 function total() {
-  var priceArray = [];
+  var total = 0;
   for (let i = 0; i < cart.length; i++){
     var itemName  = Object.keys(cart[i])[0];
-    priceArray.push(cart[i][itemName]);
+    total += cart[i][itemName];
   }
-  var total = priceArray.reduce((a, b) => a + b, 0);
-  return total;
+  console.log(total)
 }
 
 function removeFromCart(item) {
-	for (let i = 0; i < cart.length; i++){
+  var itemArray = [];
+  itemArra
+  for (let i = 0; i < cart.length; i++){
+    var itemName = Object.keys(cart[i])[0];
+    itemArray.push(itemName);
+  }
+  
    if (cart[i].hasOwnProperty(item) === true){
      cart.splice(i, 1);
      return cart;

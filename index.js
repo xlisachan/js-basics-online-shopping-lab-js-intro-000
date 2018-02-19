@@ -50,7 +50,7 @@ function removeFromCart(item) {
     var itemName = Object.keys(cart[i])[0];
     itemArray.push(itemName);
   }
-  
+
    if (cart[i].hasOwnProperty(item) === true){
      cart.splice(i, 1);
      return cart;

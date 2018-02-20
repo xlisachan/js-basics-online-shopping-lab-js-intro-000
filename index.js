@@ -43,6 +43,17 @@ function total() {
   return totalCost;
 }
 
+function removeFromCart(item) {
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].hasOwnProperty(item)) {
+      cart.slice(i, 1);
+      return cart;
+    }
+  }
+  console.log("That item is not in your cart.");
+  return cart;
+}
+
 function placeOrder(creditCardNumber) {
   if (creditCardNumber !== undefined) {
     console.log(`Your total cost is $${total()}, which will be charged to the card ${creditCardNumber}.`);
